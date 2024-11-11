@@ -18,3 +18,13 @@ The first commit has been made:
     git remote add origin git@github.com:satnetuser001/yurchenko-anton-payalnya.git
     git branch -M main
     git push -u origin main
+Added several fields, firstName, lastName, phone_number, status, and city, to user table migration.
+Refreshed tables in the database:
+    php artisan migrate:refresh
+Created UserSeeder for adding test data in to user table:
+    php artisan make:seeder UserSeeder
+Added code in UserSeeder and generate a test data in user table:
+    php artisan db:seed
+Dumped DB with MySQL in doc/mysqlDumpDB:
+    mysqldump -uroot -p payalnya > payalnya.sql
+Made a commit.
