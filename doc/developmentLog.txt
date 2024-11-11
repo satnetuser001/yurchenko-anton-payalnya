@@ -28,3 +28,7 @@ Added code in UserSeeder and generate a test data in user table:
 Dumped DB with MySQL in doc/mysqlDumpDB:
     mysqldump -uroot -p payalnya > payalnya.sql
 Made a commit.
+For the CRUD functionality of the User, created a resource Controller and a resource Route:
+    php artisan make:controller UserController --resource
+Created Index and Show pages.
+Made a commit.
