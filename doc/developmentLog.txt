@@ -1,0 +1,20 @@
+11.11.24
+Created a Laravel project:
+    composer create-project laravel/laravel yurchenko-anton-payalnya
+In MySQL created database and database user for a project:
+    CREATE DATABASE payalnya
+    CHARACTER SET utf8
+    COLLATE utf8_general_ci;
+    CREATE USER 'payalnya_app'@'localhost' IDENTIFIED BY '1077';
+    GRANT ALL PRIVILEGES ON payalnya.* TO 'payalnya_app'@'localhost';
+Added database settings to the project in .env and config/database.php files.
+Removed .env file from .gitignore to simplify project deployment.
+Migrations applied:
+    php artisan migrate
+The first commit has been made:
+    git init
+    git add .
+    git commit
+    git remote add origin git@github.com:satnetuser001/yurchenko-anton-payalnya.git
+    git branch -M main
+    git push -u origin main
