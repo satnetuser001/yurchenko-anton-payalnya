@@ -45,15 +45,30 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        dump($user);
+        return view('edit', ['user' => $user]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        /*
+        dump($request);
+        dump($user);
+        return response('update');
+        */
+
+        $user->fill([
+            'firstName'=>$request->firstName,
+            'lastName'=>$request->lastName,
+            'email'=>$request->email,
+            'phone_number'=>$request->phone_number,
+            'status'=>$request->status,
+            'city'=>$request->city,
+        ]);
+        $user->save();
+        return redirect()->route('user.show', ['user' => $user->id]);
     }
 
     /**
@@ -61,7 +76,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        dump($user);
-        return response('destroy');
+        $user->delete();
+        return redirect()->route('user.index');
     }
 }

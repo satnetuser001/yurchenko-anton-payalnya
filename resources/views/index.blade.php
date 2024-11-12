@@ -33,10 +33,10 @@
                     <td>{{$user->city}}</td>
                     <td>{{$user->created_at}}</td>
                     <td>
-                        <a href="{{ route('user.show', ['user'=>$user->id]) }}">Подробнее...</a>
+                        <a href="{{ route('user.show', ['user'=>$user->id]) }}">Детальніше</a>
                     </td>
                     <td>
-                        <a href="{{ route('user.edit', ['user'=>$user->id]) }}">Изменить</a>
+                        <a href="{{ route('user.edit', ['user'=>$user->id]) }}">Змінити</a>
                     </td>
                     <td>
                         <form action="{{ route('user.destroy', ['user'=>$user->id]) }}" method="POST">

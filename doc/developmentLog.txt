@@ -32,3 +32,4 @@ For the CRUD functionality of the User, created a resource Controller and a reso
     php artisan make:controller UserController --resource
 Created Index and Show pages.
 Made a commit.
+12.11.24

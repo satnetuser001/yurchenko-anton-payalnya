@@ -29,7 +29,7 @@
                 <td>{{$user->city}}</td>
                 <td>{{$user->created_at}}</td>
                 <td>
-                    <a href="{{ route('user.edit', ['user'=>$user->id]) }}">Изменить</a>
+                    <a href="{{ route('user.edit', ['user'=>$user->id]) }}">Змінити</a>
                 </td>
                 <td>
                     <form action="{{ route('user.destroy', ['user'=>$user->id]) }}" method="POST">
@@ -41,5 +41,5 @@
             </tr>
         </tbody>
     </table>
-    <a href="{{ route('home') }}">Усі клієнти</a>
+    <a href="{{ route('user.index') }}">Усі клієнти</a>
 @endsection
