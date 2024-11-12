@@ -33,3 +33,9 @@ For the CRUD functionality of the User, created a resource Controller and a reso
 Created Index and Show pages.
 Made a commit.
 12.11.24
+Created Edit and Delete pages.
+Сreated validation the input data using Form Request:
+    php artisan make:request StoreUpdateUserRequest
+Added validation rules in StoreUpdateUserRequest.
+Created Create page.
+Made a commit.

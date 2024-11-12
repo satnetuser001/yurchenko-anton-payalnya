@@ -4,6 +4,7 @@
 
 @section('main')
     <h2>Усі клієнти</h2>
+    <a href="{{ route('user.create') }}">Створити клієнта</a>
     @if ($context->isEmpty())
         <h3>Клієнтів не знайдено</h3>
     @else
