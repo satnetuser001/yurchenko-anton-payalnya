@@ -66,3 +66,5 @@ Add logic for sending a notification in the Model when a new client is created.
 Start processing queues:
     php artisan queue:work
 Made a commit.
+Fixed time zone in the application.
+Made a commit.
