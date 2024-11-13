@@ -41,6 +41,7 @@
             </tr>
         </tbody>
     </table>
+    <br>
     <div>
         <b>Погода у {{$user->city}}: </b>
         @if(isset($weather) && $weather !== null)
@@ -57,5 +58,6 @@
             не знайдено
         @endif
     </div>
+    <br>
     <a href="{{ route('user.index') }}">Усі клієнти</a>
 @endsection

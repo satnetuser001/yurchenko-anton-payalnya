@@ -62,6 +62,7 @@
             @enderror
         </div>
         
+        <br>
         <input type="submit" value="Зберегти">
     </form>
     <a href="{{ route('user.index') }}">Скасувати</a>

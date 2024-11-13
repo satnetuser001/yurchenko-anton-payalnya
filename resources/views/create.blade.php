@@ -1,9 +1,9 @@
 @extends('layouts.base')
 
-@section('title', 'Редагувати клієнта')
+@section('title', 'Створити клієнта')
 
 @section('main')
-    <h2>Редагувати клієнта</h2>
+    <h2>Створити клієнта</h2>
 
     <form action="{{ route('user.store') }}" method="POST">
         @csrf

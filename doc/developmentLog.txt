@@ -55,3 +55,14 @@ Setting up the SMTP server.
 Added SMTP server setting in .env.
 Created email test route.
 Made a commit.
+Install Redis:
+    sudo apt update
+    sudo apt install redis-server
+Install php-redis extension:
+    sudo apt install php-redis
+Generated a notification class:
+    php artisan make:notification WelcomeEmailNotification
+Add logic for sending a notification in the Model when a new client is created.
+Start processing queues:
+    php artisan queue:work
+Made a commit.

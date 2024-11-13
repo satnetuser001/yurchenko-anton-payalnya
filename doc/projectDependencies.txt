@@ -1,0 +1,4 @@
+PHP 8.3.6
+MySQL
+redis-server
+php-redis
