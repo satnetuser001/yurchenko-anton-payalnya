@@ -51,8 +51,6 @@ class UserController extends Controller
     {
         $weather = new WeatherWithCacheService();
         $weather = $weather->get($user->city);
-        //dump($weather);
-
         return view('show', ['user' => $user, 'weather' => $weather]);
     }
 

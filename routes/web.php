@@ -10,3 +10,12 @@ Route::get('/', function () {
 
 //user CRUD routes
 Route::resource('user', UserController::class);
+
+//SMTP test
+Route::get('/test-email', function () {
+    \Illuminate\Support\Facades\Mail::raw('Тестовий лист!', function ($message) {
+        $message->to('satnetuser001@gmail.com')
+            ->subject('Тестування пошти');
+    });
+    return 'Лист відправлений!';
+});

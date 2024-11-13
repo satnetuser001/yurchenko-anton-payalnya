@@ -51,3 +51,7 @@ Add fields to the table and make migration:
     php artisan migrate
 Added weather to Show user page.
 Made a commit.
+Setting up the SMTP server.
+Added SMTP server setting in .env.
+Created email test route.
+Made a commit.
