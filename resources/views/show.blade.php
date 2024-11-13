@@ -41,5 +41,21 @@
             </tr>
         </tbody>
     </table>
+    <div>
+        <b>Погода у {{$user->city}}: </b>
+        @if(isset($weather) && $weather !== null)
+            <div>
+                <div>температура {{$weather->temp_c}} C,</div>
+                <div>відчувається як {{$weather->feelslike_c}} C,</div>
+                <div>швидкість вітру {{$weather->wind_kph}} км/г,</div>
+                <div>атмосферний тиск {{$weather->pressure_mb}} мм р.с.,</div>
+                <div>вологість {{$weather->humidity}} %,</div>
+                <div>опади {{$weather->precip_mm}} мм,</div>
+                <div>час оновлення даних {{$weather->updated_at}} (оновлюється 1 раз на хвилину)</div>
+            </div>
+        @else
+            не знайдено
+        @endif
+    </div>
     <a href="{{ route('user.index') }}">Усі клієнти</a>
 @endsection

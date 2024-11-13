@@ -39,3 +39,15 @@ Created Edit and Delete pages.
 Added validation rules in StoreUpdateUserRequest.
 Created Create page.
 Made a commit.
+API for weather selected: https://www.weatherapi.com/
+Received key for API requests: ed6cd218108345baae2143436241211
+Created a new Service for the weather and put all the logic there:
+    php artisan make:class Services/WeatherWithCacheService
+13.11.24
+To cache the weather, create a table in the database and model:
+    php artisan make:model WeatherCache
+    php artisan make:migration create_weather_caches_table
+Add fields to the table and make migration:
+    php artisan migrate
+Added weather to Show user page.
+Made a commit.

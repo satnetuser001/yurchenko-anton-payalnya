@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\User;
+use App\Services\WeatherWithCacheService;
 
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of clients.
      */
     public function index()
     {
@@ -18,7 +19,7 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a client.
      */
     public function create()
     {
@@ -26,10 +27,11 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created client in the database.
      */
     public function store(StoreUpdateUserRequest $request)
     {
+        //used Form Request for data validation
         $user = User::create([
             'firstName'=>$request->firstName,
             'lastName'=>$request->lastName,
@@ -43,15 +45,19 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display detailed information about the client.
      */
     public function show(User $user)
     {
-        return view('show', ['user' => $user]);
+        $weather = new WeatherWithCacheService();
+        $weather = $weather->get($user->city);
+        //dump($weather);
+
+        return view('show', ['user' => $user, 'weather' => $weather]);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the client.
      */
     public function edit(User $user)
     {
@@ -59,11 +65,11 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the client in the database.
      */
-    //public function update(Request $request, User $user)
     public function update(StoreUpdateUserRequest $request, User $user)
     {
+        //used Form Request for data validation
         $user->fill([
             'firstName'=>$request->firstName,
             'lastName'=>$request->lastName,
@@ -77,7 +83,7 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the client from the database.
      */
     public function destroy(User $user)
     {
