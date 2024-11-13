@@ -50,6 +50,7 @@
                 @endforeach
             </tbody>
         </table>
+        <br>
         <!-- pagination -->
         {{ $context->links() }}
     @endif
