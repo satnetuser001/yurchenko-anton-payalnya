@@ -10,11 +10,19 @@ use App\Services\WeatherWithCacheService;
 class UserController extends Controller
 {
     /**
-     * Display a listing of clients.
+     * Display a listing of clients with filtering.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $context = User::paginate(15);
+        $context = User::query()
+        ->when($request->firstName, function ($query, $firstName) {
+            $query->where('firstName', 'like', '%' . $firstName . '%');
+        })
+        ->when($request->status, function ($query, $status) {
+            $query->where('status', $status);
+        })
+        ->paginate(15)
+        ->appends($request->query());
         return view('index', ['context' => $context]);
     }
 

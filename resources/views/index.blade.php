@@ -5,6 +5,21 @@
 @section('main')
     <h2>Усі клієнти</h2>
     <a href="{{ route('user.create') }}">Створити клієнта</a>
+    <br><br>
+    <form method="GET" action="{{ route('user.index') }}">
+        <label for="firstName">Фільтрувати за Ім'ям:</label>
+        <input type="text" name="firstName" id="firstName" value="{{ request('firstName') }}">
+        <label for="status">Фільтрувати за Статусом:</label>
+        <select name="status" id="status">
+            <option value="">Усі</option>
+            <option value="Потенційний" {{ request('status') == 'Потенційний' ? 'selected' : '' }}>Потенційний</option>
+            <option value="Активний" {{ request('status') == 'Активний' ? 'selected' : '' }}>Активний</option>
+            <option value="Неактивний" {{ request('status') == 'Неактивний' ? 'selected' : '' }}>Неактивний</option>
+            <option value="Втрачений" {{ request('status') == 'Втрачений' ? 'selected' : '' }}>Втрачений</option>
+        </select>
+        <button type="submit">Фільтрувати</button>
+    </form>
+    <br>
     @if ($context->isEmpty())
         <h3>Клієнтів не знайдено</h3>
     @else

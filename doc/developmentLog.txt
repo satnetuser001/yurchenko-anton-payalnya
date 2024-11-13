@@ -72,3 +72,5 @@ Retrieving pagination views so they can be modified:
     php artisan vendor:publish --tag=laravel-pagination
 Change arrow size <Previous Next> in file resources/views/vendor/pagination/tailwind.blade.php
 Made a commit.
+Added filtering by name and status.
+Made a commit.
