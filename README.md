@@ -1,12 +1,12 @@
 <b>Модуль CRM для керування клієнтами з використанням фреймворку Laravel</b>
 <br><br>
-Головні рекомендації щодо програмного забезпечення:
-PHP 8.3.6
-Composer 2.8.2
-Laravel 11
-MySQL 8.0.40
-redis-server 7.0.15
-php-redis
+Головні рекомендації щодо програмного забезпечення:<br>
+PHP 8.3.6<br>
+Composer 2.8.2<br>
+Laravel 11<br>
+MySQL 8.0.40<br>
+redis-server 7.0.15<br>
+php-redis<br>
 повний перелік можна переглянути в yurchenko-anton-payalnya/doc/projectDependencies.txt
 <br><br>
 Встановлення:
