@@ -10,10 +10,9 @@ php-redis<br>
 повний перелік можна переглянути в yurchenko-anton-payalnya/doc/projectDependencies.txt<br><br>
 
 Встановлення:<br>
-1.Завантажити проект<br>
-git:<br>
+1.Завантажити проект командою у git:<br>
 git clone https://github.com/satnetuser001/yurchenko-anton-payalnya.git<br>
-архив:<br>
+1а.Або скачати архив та розпакувати його:<br>
 https://github.com/satnetuser001/yurchenko-anton-payalnya/archive/refs/heads/main.zip<br>
 2.Встановити PHP пакети, виконати команду в терміналі у папці проекту yurchenko-anton-payalnya:<br>
 composer install<br>
