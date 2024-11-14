@@ -1,4 +1,5 @@
 <b>Модуль CRM для керування клієнтами з використанням фреймворку Laravel</b><br><br>
+
 Головні рекомендації щодо програмного забезпечення:<br>
 PHP 8.3.6<br>
 Composer 2.8.2<br>
@@ -7,6 +8,7 @@ MySQL 8.0.40<br>
 redis-server 7.0.15<br>
 php-redis<br>
 повний перелік можна переглянути в yurchenko-anton-payalnya/doc/projectDependencies.txt<br><br>
+
 Встановлення:<br>
 1.Завантажити проект<br>
 git:<br>
@@ -24,14 +26,16 @@ CREATE USER 'payalnya_app'@'localhost' IDENTIFIED BY '1077';<br>
 GRANT ALL PRIVILEGES ON payalnya.* TO 'payalnya_app'@'localhost';<br>
 exit<br>
 4.Накотити backup, команду виконати в терміналі у папці yurchenko-anton-payalnya/doc/mysqlDumpDB:<br>
-mysql -uroot -p payalnya < payalnya.sql<br>
-5.Запуск<br>
+mysql -uroot -p payalnya < payalnya.sql<br><br>
+
+Запуск<br>
 Відкрити два термінали у папці yurchenko-anton-payalnya та запустити команди і не закривати термінали:<br>
 у першому:<br>
 php artisan serve<br>
 у другому:<br>
 php artisan queue:work<br><br>
-6.Відкрити у браузері:<br>
-http://127.0.0.1:8000/
-<br><br>
+
+Відкрити у браузері:<br>
+http://127.0.0.1:8000/<br><br>
+
 Покрокове створення проекту описано у файлі yurchenko-anton-payalnya/doc/developmentLog.txt
