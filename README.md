@@ -28,7 +28,7 @@ exit<br>
 mysql -uroot -p payalnya < payalnya.sql<br><br>
 
 Запуск<br>
-Відкрити два термінали у папці yurchenko-anton-payalnya та запустити команди і не закривати термінали:<br>
+Відкрити два термінали у папці yurchenko-anton-payalnya, виконати команди і не закривати термінали:<br>
 у першому:<br>
 php artisan serve<br>
 у другому:<br>
