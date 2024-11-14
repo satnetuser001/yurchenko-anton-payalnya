@@ -74,3 +74,7 @@ Change arrow size <Previous Next> in file resources/views/vendor/pagination/tail
 Made a commit.
 Added filtering by name and status.
 Made a commit.
+Final DB dump with MySQL in doc/mysqlDumpDB:
+    mysqldump -uroot -p payalnya > payalnya.sql
+Added description in README.md
+Made a commit.
